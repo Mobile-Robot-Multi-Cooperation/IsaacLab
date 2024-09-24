@@ -60,3 +60,15 @@ Isaac Lab development initiated from the [Orbit](https://isaac-orbit.github.io/)
    doi={10.1109/LRA.2023.3270034}
 }
 ```
+## Add
+```
+./isaaclab.sh -p source/standalone/demos/moying.py
+./isaaclab.sh -p source/standalone/tools/convert_urdf.py  ../ros2_ws/src/moying_ros2/moying_mor/moying_mor_description/urdf/moying_mor.urdf source/extensions/omni.isaac.lab_assets/data/Robots/Moying/moying_mor.usd --headless
+
+./isaaclab.sh -p source/standalone/tools/convert_urdf.py  ../ros2_ws/src/moying_ros2/moying_mcr/moying_mcr_description/urdf/moying_mcr.urdf source/extensions/omni.isaac.lab_assets/data/Robots/Moying/moying_mcr.usd --headless
+
+```
+```
+#colcon build --packages-select moying_chassis_description moying_mcr_description moying_mor_description robotiq_ft_sensor_description robotiq_description elfin_description
+export ROS_PACKAGE_PATH=/home/jk/Project/HumanoidLearning/ros2_ws/install/elfin_description/share:/home/jk/Project/HumanoidLearning/ros2_ws/install/moying_chassis_description/share:/home/jk/Project/HumanoidLearning/ros2_ws/install/moying_mcr_description/share:/home/jk/Project/HumanoidLearning/ros2_ws/install/robotiq_description/share:/home/jk/Project/HumanoidLearning/ros2_ws/install/robotiq_ft_sensor_description/share:/home/jk/Project/HumanoidLearning/ros2_ws/install/moying_mor_description/share:$ROS_PACKAGE_PATH
+```
